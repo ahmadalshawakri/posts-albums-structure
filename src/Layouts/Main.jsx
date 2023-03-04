@@ -1,13 +1,14 @@
-import React, { useEffect, useContext } from 'react';
-import { useNavigate, Routes, Route, Navigate } from 'react-router-dom';
+import React, { useEffect, useContext } from "react";
+import { useNavigate, useRoutes } from "react-router-dom";
 
-import { AuthenticationService } from '../services';
-import { UserContext } from '../context';
-import { MainRouters } from '../Routers';
+import { AuthenticationService } from "../services";
+import { UserContext } from "../context";
+import { MainRouters } from "../Routers";
 
-const Wrapper = ({ Component }) => <Component />;
+// const Wrapper = ({ Component }) => <Component />;
 
 const MainLayout = () => {
+  const mainRoutes = useRoutes(MainRouters);
   const navigate = useNavigate();
 
   const { setCurrentUser } = useContext(UserContext);
@@ -17,25 +18,13 @@ const MainLayout = () => {
     if (!isLoggedIn) {
       navigate(
         `/login?returnUrl=${encodeURIComponent(
-          window.location.href.replace(window.location.origin, ''),
-        )}`,
+          window.location.href.replace(window.location.origin, "")
+        )}`
       );
     } else setCurrentUser(AuthenticationService.getCurrentUser());
   }, [navigate, setCurrentUser]);
 
-  return (
-    <Routes>
-      {MainRouters?.map((router, index) => (
-        <Route
-          path={router.path}
-          exact={router.isExact}
-          key={`${index}-${router.name}`}
-          element={<Wrapper Component={router.component} />}
-        />
-      ))}
-      <Route path='/' element={<Navigate replace to='/albums/' />} />
-    </Routes>
-  );
+  return <>{mainRoutes}</>;
 };
 
 export default MainLayout;

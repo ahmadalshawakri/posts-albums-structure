@@ -18,7 +18,7 @@ const Login = () => {
       if (!verifiedUser) {
         setError("Invalid Credentials!");
       } else {
-        navigate("/albums/");
+        navigate("/");
       }
     } catch (error) {
       setError("Something went wrong.");

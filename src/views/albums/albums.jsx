@@ -15,7 +15,7 @@ const Albums = () => {
       const albums = await getAlbums();
 
       const userAlbums = await albums?.filter(
-        (album) => album.userId === currentUser.id
+        (album) => album.userId === currentUser?.id
       );
       setAlbums(userAlbums);
     };
