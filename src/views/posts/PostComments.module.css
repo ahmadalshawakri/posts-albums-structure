@@ -1,0 +1,16 @@
+.mainPost p {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  letter-spacing: 0.0094rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  max-width: 21.875rem;
+  margin: auto;
+  gap: 0.3rem;
+  padding-bottom: 5rem;
+}

@@ -10,7 +10,7 @@ const LoginLayout = () => {
   useEffect(() => {
     const isLoggedIn = AuthenticationService.isLoggedIn();
     if (isLoggedIn) {
-      navigate("/albums/");
+      navigate(-1);
     } else {
       StorageService.setAuthKey(undefined);
     }

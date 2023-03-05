@@ -1,0 +1,21 @@
+.addComment {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: text;
+}
+
+.addComment input {
+  border: transparent;
+  min-width: 90%;
+  color: #000;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 0.6875rem;
+  line-height: 0.8125rem;
+  cursor: text;
+}
+
+.addComment input:focus {
+  outline: none;
+}

@@ -1,0 +1,21 @@
+.footer {
+  /* justify-content: space-around; */
+  position: sticky;
+  bottom: 0%;
+  padding-bottom: 0.3125rem;
+  display: block;
+  background: #fff;
+  text-align: center;
+}
+
+.footer button {
+  position: sticky;
+  min-width: 4rem;
+  height: 2.5rem;
+  background: linear-gradient(202.17deg, #ff00d6 8.58%, #ff4d00 91.42%);
+  border: transparent;
+  border-radius: 1.2rem;
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+}

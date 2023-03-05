@@ -5,8 +5,6 @@ import { AuthenticationService } from "../services";
 import { UserContext } from "../context";
 import { MainRouters } from "../Routers";
 
-// const Wrapper = ({ Component }) => <Component />;
-
 const MainLayout = () => {
   const mainRoutes = useRoutes(MainRouters);
   const navigate = useNavigate();
