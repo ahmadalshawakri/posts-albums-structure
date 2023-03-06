@@ -5,6 +5,7 @@ const Albums = lazy(() => import("../views/albums/albums"));
 const Photos = lazy(() => import("../views/albums/Photos"));
 const Posts = lazy(() => import("../views/posts/Posts"));
 const PostComments = lazy(() => import("../views/posts/PostComments"));
+const NotFound = lazy(() => import("../views/NotFound/NotFound"));
 
 export const MainRouters = [
   {
@@ -33,6 +34,7 @@ export const MainRouters = [
       },
       {
         path: "photos",
+        index: true,
         element: (
           <Suspense>
             <Photos />
@@ -61,5 +63,10 @@ export const MainRouters = [
         ),
       },
     ],
+  },
+  {
+    path: "*",
+    element: <NotFound />,
+    index: true,
   },
 ];
