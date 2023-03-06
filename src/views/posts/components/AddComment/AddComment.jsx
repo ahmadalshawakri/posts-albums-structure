@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import classes from "./AddComment.module.css";
-import Comment from "./Comment";
-import commentIcon from "../../../img/Vector.png";
+import Comment from "../Comment/Comment";
+import commentIcon from "../../../../img/Vector.png";
 
 const AddComment = (props) => {
   const comment = useRef(null);

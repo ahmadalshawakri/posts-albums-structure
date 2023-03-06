@@ -7,8 +7,8 @@ import classes from "./PostComments.module.css";
 import Headers from "../../components/HeadersUI/Headers";
 import UserInfo from "../../components/UserInfo/UserInfo";
 import Card from "../../components/CardUI/Card";
-import CommentContent from "./components/CommentContent";
-import AddComment from "./components/AddComment";
+import CommentContent from "./components/CommentContent/CommentContent";
+import AddComment from "./components/AddComment/AddComment";
 
 const PostComments = (props) => {
   const { currentUser } = useContext(UserContext);

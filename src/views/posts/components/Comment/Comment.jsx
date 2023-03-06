@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
-import { UserContext } from "../../../context/user.context";
+import { UserContext } from "../../../../context/user.context";
 import classes from "./Comment.module.css";
-import commenterPhoto from "../../../img/comments.png";
+import commenterPhoto from "../../../../img/comments.png";
 
 const Comment = (props) => {
   const loggedUser = useContext(UserContext);

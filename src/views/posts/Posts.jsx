@@ -6,9 +6,9 @@ import searchIcon from "../../img/icons8-search-48.png";
 import classes from "./Posts.module.css";
 import Headers from "../../components/HeadersUI/Headers";
 import UserInfo from "../../components/UserInfo/UserInfo";
-import PostContent from "./components/PostContent";
-import AddComment from "./components/AddComment";
-import AddPost from "./components/AddPost";
+import PostContent from "./components/PostContent/PostContent";
+import AddComment from "./components/AddComment/AddComment";
+import AddPost from "./components/AddPost/AddPost";
 import Card from "../../components/CardUI/Card";
 
 const Posts = (props) => {
@@ -17,7 +17,6 @@ const Posts = (props) => {
   const [state, setState] = useState({
     allPosts: [],
     loadedPosts: [],
-    userInfo: [],
     isLoaded: false,
     startIndex: 0,
   });
@@ -29,7 +28,6 @@ const Posts = (props) => {
       setState({
         allPosts: userPosts,
         loadedPosts: posts.slice(0, 5),
-        userInfo: currentUser,
         isLoaded: true,
         startIndex: 5,
       });
@@ -88,10 +86,7 @@ const Posts = (props) => {
         {state.isLoaded &&
           filteredPosts.map((post) => (
             <React.Fragment key={post.id}>
-              <UserInfo
-                name={state.userInfo.name}
-                userName={state.userInfo.username}
-              />
+              <UserInfo />
               <PostContent content={post} />
               <AddComment />
             </React.Fragment>

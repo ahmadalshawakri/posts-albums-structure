@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./CommentContent.module.css";
-import commenterPhoto from "../../../img/comments.png";
+import commenterPhoto from "../../../../img/comments.png";
 
 const CommentContent = ({ commentData }) => {
   return (
