@@ -1,0 +1,12 @@
+.logoutBtn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: transparent;
+  border: 1px solid #000;
+  width: 5rem;
+  height: 2rem;
+  border-radius: 7px;
+  font-family: "Comfortaa";
+  font-weight: 700;
+}

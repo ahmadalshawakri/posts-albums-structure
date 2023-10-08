@@ -1,7 +1,17 @@
-.homeCont{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
+.homeCont {
+  display: flex;
+  height: 90vh;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.homeCont > div {
+  cursor: pointer;
+  transition: text-decoration 0.2;
+}
+
+.homeCont > div:hover {
+  text-decoration: underline;
 }
